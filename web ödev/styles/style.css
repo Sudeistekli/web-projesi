@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 :root{
     --main-color:#ea949fb4;
-    --black-color:#413746;
+    --back-color:#413746;
     --border:0.1rem solid rgba(255,255,255,0.4);
 }
 *{
@@ -49,12 +49,12 @@ body{
 .header .navbar a {
     margin: 0.9rem;
     font-size: 1.3rem;
-    color: var (--black-color);
+    color: var (--back-color);
     border-bottom: 0.1rem solid transparent;
 }
 .header .navbar .active,
 .header .navbar a:hover{
-    border-color:var(--black-color);
+    border-color:#ea949f;
     padding-bottom:0.5rem;
     
 }
@@ -69,11 +69,67 @@ body{
 /*anasayfa başlangıç*/
 .Anasayfa{
     min-height: 200vh;
-    background: url(../images/background.png) ;
-    /*no-repeat;*/
+    background: url(../images/background.png) 
+    no-repeat;
+   
+    /*margin-top: -10.3rem;*/
     
+   
+    display: flex;
+    align-items: center;
+    justify-content: center; /* dikey ve yatay ortalama yaptım */
+  }
+  
+  .welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3rem;
+    color: #171717e0; 
+
+  }
+  
+  .welcome-message span {
+    font-weight: bold;
+
+}
+
+.surukleme-butonu{
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #68c7d0a3;
+    border: none;
+    border-radius: 20rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
     
 }
-.Anasayfa .content h3{
-    font-size: 2rem;
+.surukleme-butonu:hover{
+    background-color: #325e62a3;
+}
+.surukleme-butonu {
+    cursor: move;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+.section{
+    padding:3.5rem 7%;
+}
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size:1.7rem;
+    color: #ea949f;
+    background-color: #68c7d0a3;
+    cursor:pointer;
 }
