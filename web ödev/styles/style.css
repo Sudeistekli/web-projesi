@@ -24,6 +24,15 @@ html{
     scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar{
+    width:0.8rem;
+    background-color: #46364e;
+}
+html::-webkit-scrollbar-thumb{
+border-radius: 2rem;
+background-color: #858186;
+}
+
 body{
     background-color: var(--main-color);
 }
@@ -49,7 +58,7 @@ body{
 .header .navbar a {
     margin: 0.9rem;
     font-size: 1.3rem;
-    color: var (--back-color);
+    color: #37273f;
     border-bottom: 0.1rem solid transparent;
 }
 .header .navbar .active,
@@ -69,18 +78,18 @@ body{
 /*anasayfa başlangıç*/
 .Anasayfa{
     min-height: 200vh;
-    background: url(../images/background.png) 
-    no-repeat;
+    background: url(../images/background.png);
+    
+    object-fit: cover;
    
     /*margin-top: -10.3rem;*/
     
-   
     display: flex;
     align-items: center;
     justify-content: center; /* dikey ve yatay ortalama yaptım */
-  }
+}
   
-  .welcome-message {
+.welcome-message {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -89,9 +98,9 @@ body{
     font-size: 3rem;
     color: #171717e0; 
 
-  }
+}
   
-  .welcome-message span {
+.welcome-message span {
     font-weight: bold;
 
 }
@@ -121,7 +130,7 @@ body{
     transform: translate(-50%, -50%);
 }
 .section{
-    padding:3.5rem 7%;
+    padding: 3.5rem 7%;
 }
 .btn {
     margin-top: 1rem;
@@ -133,3 +142,28 @@ body{
     background-color: #68c7d0a3;
     cursor:pointer;
 }
+
+.btn:hover{
+    opacity: 0.7;
+}
+.Hakkimda{
+    position: absolute;
+    top: 128%;
+    left: 3%;
+    text-align: center;     
+    font-size: 1.4rem;
+    color: #37273f;
+    border-bottom: 0.1rem solid #37273f;
+    width: 40%;
+}
+.hakkimda-paragraf {
+    position: absolute;
+    left: 3%;
+    right: 2%;
+    bottom: -40rem;
+    font-size: 100%;
+    font-style: times-new-romen;
+    text-transform: none;
+}
+
+
