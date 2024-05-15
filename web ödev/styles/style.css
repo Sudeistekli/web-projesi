@@ -57,7 +57,7 @@ body{
 }
 .header .navbar a {
     margin: 0.9rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #37273f;
     border-bottom: 0.1rem solid transparent;
 }
@@ -79,11 +79,8 @@ body{
 .Anasayfa{
     min-height: 190vh;
     background: url(../images/background.png);
-    
     object-fit: cover;
-   
     /*margin-top: -10.3rem;*/
-    
     display: flex;
     align-items: center;
     justify-content: center; /* dikey ve yatay ortalama yaptım */
@@ -97,12 +94,10 @@ body{
     text-align: center;
     font-size: 3rem;
     color: #171717e0; 
-
 }
   
 .welcome-message span {
     font-weight: bold;
-
 }
 
 .surukleme-butonu{
@@ -117,7 +112,6 @@ body{
     border-radius: 20rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: fixed;
-    
 }
 .surukleme-butonu:hover{
     background-color: #325e62a3;
@@ -151,7 +145,7 @@ body{
 .heading{
     padding: 1rem;
     text-transform: none;
-    margin-bottom: 2.5rem;
+    margin-bottom: -6rem;
     border-bottom: 0.1rem solid #37273f;
     margin-left: 38rem;
     margin-right: 20rem;
@@ -167,7 +161,7 @@ body{
     flex-direction: column;
     align-items: flex-start; 
     position: relative;
-    top: -70rem;
+    top: -60rem;
     margin-left: 7rem;
     margin-right: 7rem;
 }
@@ -177,4 +171,46 @@ body{
     object-fit: cover ;
 }
 
+.hakkimda-paragraf {
+    position: absolute;
+    left: 25%;
+    right: 2%;
+    bottom: 30rem;
+    font-size: 150%;
+    font-style: times-new-romen;
+    text-transform: none;
+}
 
+/*anasayfa bitiş*/
+
+/*öz geçmiş başlangıç*/
+.Ozgecmis{
+    min-height: 190vh;
+    background: url(../images/background.png);
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Ozgecmis .img{
+    width: 18%;
+    object-fit: cover ; 
+}
+
+/*öz geçmiş bitiş*/
+
+
+/*şehrim başlangıç*/
+/*şehrim bitiş*/
+
+
+/*mirasımız başlangıç*/
+/*mirasımız bitiş*/
+
+
+/*hobilerim başlangıç*/
+/*hobilerim bitiş*/
+
+
+/*iletişim başlangıç*/
+/*iletişim bitiş*/
