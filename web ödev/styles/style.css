@@ -35,7 +35,49 @@ background-color: #858186;
 
 body{
     background-color: var(--main-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Footer stilleri */
+footer {
+    background-color: #333333c5;
+    color: #fff;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+/*footer bitiş*/
 
 /*header başlangıç*/
 .header .logo img {
@@ -183,6 +225,7 @@ body{
 
 /*anasayfa bitiş*/
 
+
 /*öz geçmiş başlangıç*/
 .Ozgecmis{
     min-height: 190vh;
@@ -192,10 +235,17 @@ body{
     align-items: center;
     justify-content: center;
 }
-.Ozgecmis .img{
-    width: 18%;
-    object-fit: cover ; 
+.Ozgecmis .box-container .box img{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover ;
+    margin-bottom: 100rem;
+    
 }
+
+
 
 /*öz geçmiş bitiş*/
 
