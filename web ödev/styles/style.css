@@ -208,6 +208,7 @@ footer {
     top: -60rem;
     margin-left: 7rem;
     margin-right: 7rem;
+    
 }
 
 .Hakkimda .box-container .box img {
@@ -215,15 +216,7 @@ footer {
     object-fit: cover ;
 }
 
-.hakkimda-paragraf {
-    position: absolute;
-    left: 25%;
-    right: 2%;
-    bottom: 30rem;
-    font-size: 150%;
-    font-style: times-new-romen;
-    text-transform: none;
-}
+
 
 /*anasayfa bitiş*/
 
@@ -258,14 +251,86 @@ footer {
 
 
 /*şehrim başlangıç*/
+.Sehrim{
+    min-height: 97vh;
+    background: url(../images/background.png);
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.Sehrim .heading h1{
+    margin-top: 5rem;
+}
+
+.Sehrim .box-container .box{
+    margin-top: 15rem;
+    padding:5rem;
+    border-radius: 3rem;
+    background-color: #ffffff87; 
+    min-height: 25rem;
+    align-items: flex-start; 
+    top: -45rem; 
+    margin-left: 45vh;   
+    max-width: 96rem;
+
+}
 /*şehrim bitiş*/
 
 
 /*mirasımız başlangıç*/
+.Mirasimiz{
+    min-height: 97vh;
+    background: url(../images/background.png);
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.Mirasimiz .heading h1{
+    margin-top: 5rem;
+}
+
+.Mirasimiz .box-container .box{
+    margin-top: 15rem;
+    padding:5rem;
+    border-radius: 3rem;
+    background-color: #ffffff87; 
+    min-height: 25rem;
+    align-items: flex-start; 
+    top: -45rem; 
+    margin-left: 45vh;   
+    max-width: 96rem;
+
+}
 /*mirasımız bitiş*/
 
 
 /*hobilerim başlangıç*/
+.Hobilerim{
+    min-height: 97vh;
+    background: url(../images/background.png);
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.Hobilerim .heading h1{
+    margin-top: 5rem;
+}
+
+.Hobilerim .box-container .box{
+    margin-top: 15rem;
+    padding:5rem;
+    border-radius: 3rem;
+    background-color: #ffffff87; 
+    min-height: 25rem;
+    align-items: flex-start; 
+    top: -45rem; 
+    margin-left: 45vh;   
+    max-width: 96rem;
+
+}
 /*hobilerim bitiş*/
 
 
