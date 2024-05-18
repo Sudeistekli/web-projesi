@@ -335,4 +335,98 @@ footer {
 
 
 /*iletişim başlangıç*/
+.iletisim{
+    min-height: 97vh;
+    background: url(../images/background.png);
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.iletisim .heading h1{
+    margin-bottom: -5rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;  
+}
+
+.iletisim .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.iletisim .box {
+    margin-top: 10rem;
+    margin-left: 19rem;
+    padding: 5rem;
+    border-radius: 3rem;
+    background-color: #ffffff87;
+    min-height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100rem;
+    width: 100%;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 200%;
+}
+
+.contact-form label {
+    margin: 0.5rem ;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 150%;
+    padding: 0.9rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.contact-form button {
+    padding: 1rem 2rem;
+    background-color: #68c7d0a3;
+    color: #000000;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    margin-top: 3rem;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
 /*iletişim bitiş*/
+
+
+
+/*responsive başlangıç*/
+@media(max-width:991px){
+    hmtl{
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem 2rem;
+    }
+    .header .logo img{
+        height: 7rem;
+    }
+    .section{
+        padding: 2rem;
+    }
+
+}
+/*responsive bitiş*/
