@@ -44,6 +44,42 @@ body{
     margin: 0 auto;
 }
 
+.carousel-item img {
+    display: block;
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;  
+}
+
+
+.carousel-inner {
+    display: flex;
+    align-items: flex-start; /* İçeriği yukarı hizala */
+  }
+  
+.carousel {
+    position: relative;
+    margin-top: 0; /* Üstten boşluğu kaldır */
+    padding-top: 0; /* Üstten dolgu boşluğunu kaldır */
+  }
+
+@media (min-width: 1200px) {
+    .carousel-item img {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .carousel-item img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-item img {
+        width: 90%;
+    }
+}
 /* Footer stilleri */
 footer {
     background-color: #333333c5;
@@ -215,15 +251,12 @@ footer {
     width: 18%;
     object-fit: cover ;
 }
-
-
-
 /*anasayfa bitiş*/
 
 
 /*öz geçmiş başlangıç*/
 .Ozgecmis{
-    min-height: 97vh;
+    min-height: 140vh;
     background: url(../images/background.png);
     object-fit: cover;
     align-items: center;
@@ -242,11 +275,11 @@ footer {
     min-height: 25rem;
     align-items: flex-start; 
     top: -45rem; 
-    margin-left: 45vh;   
-    max-width: 96rem;
+    margin-left: 20vh;   
+    margin-right: 10vh;
+    min-width: 100rem;
 
 }
-
 /*öz geçmiş bitiş*/
 
 
@@ -265,14 +298,16 @@ footer {
 
 .Sehrim .box-container .box{
     margin-top: 15rem;
-    padding:5rem;
+    padding:3rem;
     border-radius: 3rem;
     background-color: #ffffff87; 
     min-height: 25rem;
     align-items: flex-start; 
     top: -45rem; 
-    margin-left: 45vh;   
-    max-width: 96rem;
+    margin-left: 20vh;  
+    margin-right: 15vh; 
+    min-width: 100rem;
+    
 
 }
 /*şehrim bitiş*/
@@ -293,14 +328,15 @@ footer {
 
 .Mirasimiz .box-container .box{
     margin-top: 15rem;
-    padding:5rem;
+    padding:3rem;
     border-radius: 3rem;
     background-color: #ffffff87; 
     min-height: 25rem;
     align-items: flex-start; 
     top: -45rem; 
-    margin-left: 45vh;   
-    max-width: 96rem;
+    margin-left: 20vh;   
+    margin-right: 15vh;
+    min-width: 100rem;
 
 }
 /*mirasımız bitiş*/
@@ -327,8 +363,9 @@ footer {
     min-height: 25rem;
     align-items: flex-start; 
     top: -45rem; 
-    margin-left: 45vh;   
-    max-width: 96rem;
+    margin-left: 20vh;
+    margin-right: 15vh;   
+    min-width: 100rem;
 
 }
 /*hobilerim bitiş*/
@@ -374,7 +411,7 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form {
+ .contact-form {
     display: flex;
     flex-direction: column;
     width: 200%;
@@ -395,6 +432,11 @@ footer {
     border-radius: 0.5rem;
 }
 
+.form-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 3rem;
+}
 .contact-form button {
     padding: 1rem 2rem;
     background-color: #68c7d0a3;
@@ -409,10 +451,109 @@ footer {
 .contact-form button:hover {
     background-color: #555;
 }
+
+.contact-form button {
+    padding: 1rem 2rem;
+    background-color: #68c7d0a3;
+    color: #000000;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    margin-top: 3rem;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+.contact-form .clear-button {
+    background-color: #bc5454a3;
+    margin-left: 1rem;
+}
+
+.contact-form .clear-button:hover {
+    background-color: #555;
+}
+
 /*iletişim bitiş*/
 
 
+/*slider*/
+.Kaleici .kaleici-bilgiler{
+    display: flex;
+    margin-top: 5rem;
+    padding: 10rem;
+}
 
+.Konyaalti .konyaalti-bilgiler{
+    display: flex;
+    margin-top: 5rem;
+    padding: 10rem;
+}
+.Legends .legends-bilgiler{
+    display: flex;
+    margin-top: 5rem;
+    padding: 10rem; 
+}
+.Piyaz .piyaz-bilgiler{
+    display: flex;
+    margin-top: 5rem;
+    padding: 10rem; 
+}
+/*slider bitiş*/
+
+/*login*/
+.Login{
+    min-height: 97vh;
+    background: url(../images/background.png);
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Login-container {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Login label {
+    font-weight: bold;
+}
+
+.Login input[type="text"],
+.Login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.Login input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #68c7d0a3;
+    color: #ea949fb4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Login input[type="submit"]:hover {
+    background-color: #325e62a3;
+}
+/*login bitiş*/
 /*responsive başlangıç*/
 @media(max-width:991px){
     hmtl{

@@ -8,21 +8,47 @@
     <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
     
-   
+    <style>
+      
+      button {
+        padding: 10px 20px; /* Buton içeriği ile buton kenarları arasındaki boşluk */
+        font-size: 18px; /* Buton metni boyutu */
+      }
+      #input {
+      font-size: 18px; /* Yazı boyutu */
+      padding: 10px; /* Kutucuk içeriği ile kenarları arasındaki boşluk */
+      width: 300px; /* Kutucuk genişliği */
+    }
+    </style>
+
    <script type="text/javascript">
-   
-   
+      
    function butonTiklandi() {
        window.scrollTo({
         top: 800,
         behavior: 'smooth'
     });
   }
-    </script>
+
+  function getBooks() {
+      document.getElementById('output').innerHTML = "";
+      fetch("http://openlibrary.org/search.json?q=" + document.getElementById("input").value)
+        .then(response => response.json())
+        .then(data => {
+          for (var i = 0; i < data.docs.length; i++) {
+            document.getElementById("output").innerHTML += "<h2>" + data.docs[i].title + "</h2>" + data.docs[i].author_name[0] + "<br><img src='http://covers.openlibrary.org/b/isbn/" + data.docs[i].isbn[0] + "-M.jpg'><br>";
+          }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    }
+  </script>
+
     <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+  
   </head>
 
 <body>
+
    <header class="header">
     <a href="#" class="logo">
         <img src="images/logo.png" alt ="logo" />
@@ -34,19 +60,16 @@
         <a  href="mirasımız.html">Mirasımız</a>
         <a  href="hobilerim.html" class="active">Hobilerim</a>       
         <a  href="iletisim.html">İletişim</a>
-    </nav>
-    
-    <div class="buttons">
-        <button>
-            <i class="fa-solid fa-search"></i>
-        </button>
-        <button>
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        <button> 
-            <i class="fa-solid fa-user"></i>
-        </button>
-    </div>
+        <a href="login.html" class=>Login</a>
+      </nav>
+      <div class="buttons">
+          <button>
+              <i class=""></i>
+          </button>
+          <button> 
+              <i class=""></i>
+          </button>
+      </div>
    </header>
 
    <section class="Hobilerim">
@@ -54,23 +77,39 @@
     <div class="box-container">
       <div class="box"> 
           <section class="hobilerim">
-            <p style="text-transform: none;">  
-              Hobilerim
+            <p style="text-transform: none; font-size: small;">   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Biraz da beni ben yapan hobilerimden bahsetmek istiyorum. 2.sınıfta müzik hocamın teşvikiyle ut çalmaya başladım ve hala amatör bir şekilde çalıyorum. 
+              Ayrıca resim yapmayı çok seviyorum, özellikle karakalem çalışıyorum ve akrilik boya tabloları yapıyorum (aşağıda birkaç tablomun fotoğrafı var). 
+              Ortaokulda voleybol oynamaya başladım şuan devam etmesem de hala seyretmeye ve takip etmeye devam ediyorum. Kodlamayla ortaokulda bilişim dersinde scratch ile tanıştım ve orda oyunlar vb. projeler yapmayı sevdim. 
+              O zamanlar kodlama öğrenmeye çok devam edemesem de şimdi bilgisayar mühendisliği okuyorum. 
+              Aynı zamanda kitap okumaya bayılırım, bu yaşıma kadar birçok eser bitirdim.
+              Şu anda dünya edebiyatının en önemli eserlerinden olan Oblomov'u okumaktayım.
+              Dizi ve film izlemeyi çok severim , vakit buldukça bu hobilerimi yapmaya devam ediyorum.
+              <br>
+              <br>
+              <img src="images/hobi1.png" alt="hobi"
+              width="611"
+              height="245">
             </p>   
           </section>
-            
+      <input id="input">
+      <button onclick="getBooks()">Kitap getir!</button><br>
+      <div id="output"></div>      
     </div>
 </section>
 
+
+
+
    <!-- Footer -->
-<footer>
+   <footer>
     <div class="container">
         <div class="footer-content">
             <p>&copy; 2024 Web Sayfası. Tüm hakları saklıdır.</p>
             <ul class="footer-links">
-                <li><a href="#">Anasayfa</a></li>
-                <li><a href="#">Hakkımızda</a></li>
-                <li><a href="#">İletişim</a></li>
+                <li><a href="index.html">Anasayfa</a></li>
+                
+                <li><a href="iletisim.html">İletişim</a></li>
             </ul>
         </div>
     </div>

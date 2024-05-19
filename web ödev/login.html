@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MY WEBSİTE </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    
+   <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+   <header class="header">
+    <a href="#" class="logo">
+        <img src="images/logo.png" alt ="logo" />
+    </a>
+    <nav class= "navbar" >
+        <a  href="index.html" >Anasayfa</a>
+        <a  href="ozgecmis.html">Öz geçmiş</a>
+        <a  href="sehrim.html" >Şehrim</a>
+        <a  href="mirasımız.html">Mirasımız</a>
+        <a  href="hobilerim.html">Hobilerim</a>       
+        <a  href="iletisim.html">İletişim</a>
+        <a href="login.html" class="active">Login</a>
+        </nav>
+        <div class="buttons">
+            <button>
+                <i class=""></i>
+            </button>
+            <button> 
+                <i class=""></i>
+            </button>
+        </div>
+   </header>
+
+   <section class="Login">
+    <div class="Login-container">
+        <h2>Giriş Yap</h2>
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <label for="username">Kullanıcı Adı (Örneğin: b1812100001@sakarya.edu.tr):</label><br>
+            <input type="text" id="username" name="username" value="<?php if(isset($username)) echo $username; ?>"><br>
+            <label for="password">Şifre (Örneğin: b1812100001):</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Giriş Yap">
+        </form>
+    </div>
+</section>
+   <footer>
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2024 Web Sayfası. Tüm hakları saklıdır.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Anasayfa</a></li>
+                
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>
