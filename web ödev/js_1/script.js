@@ -1,5 +1,5 @@
 const carousel = new bootstrap.Carousel('#myCarousel')
- 
+//slider 
 document.getElementById("img1").addEventListener("click", function() {
     window.open("kaleici.html", "_self");
 });
@@ -16,7 +16,9 @@ document.getElementById("img4").addEventListener("click", function() {
     window.open("piyaz.html", "_self");
 });
 
+//slider bitiş
 
+//APİ 
 var data = null;
 
 var xhr = new XMLHttpRequest();
@@ -61,3 +63,43 @@ xhr.addEventListener("readystatechange", function () {
       });
     }
   });
+
+  //APİ bitiş
+
+//İletişim 
+  function clearForm() {
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+  }
+  
+  document.querySelector(".contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+  
+  
+    clearForm();
+  });
+
+  function saveToFile() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const data = `Adınız: ${name}\nE-posta: ${email}\nMesajınız: ${message}`;
+
+    const blob = new Blob([data], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.style.display = 'none';
+    a.href = url;
+    a.download = 'contact.txt';
+
+    document.body.appendChild(a);
+    a.click();
+
+    window.URL.revokeObjectURL(url);
+}
+//iletişim bitiş

@@ -126,8 +126,6 @@ footer {
     align-items: center;                   /*yazıları dikeyde ortaladık*/
     justify-content: space-between;        /*yazıları yatayda hizaladık*/
     padding: 0 7%;
-    /*margin: 2rem 7%;
-    border-radius: 30rem;*/
     box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
     position: sticky;
     top: 0;
@@ -503,19 +501,20 @@ footer {
 }
 /*slider bitiş*/
 
-/*login*/
-.Login{
+/*login başlangıç*/
+.Login {
+
     min-height: 97vh;
     background: url(../images/background.png);
+    display: flex;
     object-fit: cover;
     align-items: center;
     justify-content: center;
 }
 
-
 .Login-container {
-    background-color: #fff;
-    width: 300px;
+    background-color: #ffffffc6;
+    width: 400px;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -543,7 +542,7 @@ footer {
     width: 100%;
     padding: 10px;
     background-color: #68c7d0a3;
-    color: #ea949fb4;
+    color: #333;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -554,20 +553,163 @@ footer {
     background-color: #325e62a3;
 }
 /*login bitiş*/
-/*responsive başlangıç*/
-@media(max-width:991px){
-    hmtl{
+
+/* Responsive başlangıç */
+@media (max-width: 991px) {
+    html {
         font-size: 55%;
     }
+
     .header {
         padding: 1.5rem 2rem;
     }
-    .header .logo img{
+
+    .header .logo img {
         height: 7rem;
     }
-    .section{
+
+    .header .navbar a {
+        font-size: 1.2rem;
+    }
+
+    .section {
         padding: 2rem;
     }
 
+    .Hakkimda .box-container .box,
+    .Ozgecmis .box-container .box,
+    .Sehrim .box-container .box,
+    .Mirasimiz .box-container .box,
+    .Hobilerim .box-container .box,
+    .iletisim .box {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        min-width: auto;
+        padding: 3rem;
+    }
+
+    .carousel-item img {
+        max-width: 80%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links li {
+        margin: 5px 10px;
+    }
+
+    .Login-container {
+        width: 90%;
+    }
 }
-/*responsive bitiş*/
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header .navbar {
+        display: none;
+    }
+
+    .header .buttons {
+        display: none;
+    }
+
+    .header .logo img {
+        height: 5rem;
+    }
+
+    .surukleme-butonu {
+        padding: 1rem 3rem;
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 0.5rem 2rem;
+        font-size: 1.5rem;
+    }
+
+    .Hakkimda .box-container .box,
+    .Ozgecmis .box-container .box,
+    .Sehrim .box-container .box,
+    .Mirasimiz .box-container .box,
+    .Hobilerim .box-container .box,
+    .iletisim .box {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        min-width: auto;
+        padding: 2rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .Login-container {
+        width: 90%;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+}
+      
+@media (max-width: 480px) {
+    html {
+        font-size: 45%;
+    }
+
+    .welcome-message {
+        font-size: 2rem;
+    }
+
+    .surukleme-butonu {
+        padding: 0.5rem 2rem;
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .Hakkimda .box-container .box,
+    .Ozgecmis .box-container .box,
+    .Sehrim .box-container .box,
+    .Mirasimiz .box-container .box,
+    .Hobilerim .box-container .box,
+    .iletisim .box {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        min-width: auto;
+        padding: 1rem;
+    }
+
+    .footer-links li {
+        margin: 3px 0;
+    }
+
+    .Login-container {
+        width: 95%;
+    }
+    .Mirasimiz .box-container .box img  {
+        max-width: 100%;
+        height: auto; 
+    }
+}
+/* Responsive bitiş */
